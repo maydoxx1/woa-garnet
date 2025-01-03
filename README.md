@@ -1,4 +1,4 @@
-> [!warning]
+> [!Warning]
 > Guide is under development and is missing files. **Do not use.**
 
 <img align="right" src="" width="350" alt="Windows 11 running on garnet">
@@ -25,11 +25,7 @@ This project is in an early stage, all the files here have been contributed by o
 ## Miscellaneous
 - [Dualboot setup](guide/dualboot.md)
 
-- [Additional materials](guide/materials.md)
-
 - [Update drivers](guide/update.md) Currently No drivers!
-
-- [Reinstall instructions](guide/reinstall.md)
 
 - [Uninstall instructions](guide/uninstall.md)
 
@@ -56,26 +52,3 @@ This project is in an early stage, all the files here have been contributed by o
 [<img alt="n00b69" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/83274506?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/n00b69)
 [<img alt="TrustedFloppa" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/85476585?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/TrustedFloppa)
 [<img alt="Misha803" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/118528504?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/Misha803)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
