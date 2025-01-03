@@ -1,7 +1,7 @@
 > [!Warning]
 > Guide is under development and is missing files. **Do not use.**
 
-<img align="right" src="https://github.com/maydoxx1/woa-garnet/raw/refs/heads/main/1000011138.tiff" width="350" alt="Windows 11 running on garnet">
+<img align="right" src="https://github.com/maydoxx1/woa-garnet/raw/refs/heads/main/garnet.png" width="350" alt="Windows 11 running on garnet">
 
 # Running Windows on the Redmi Note 13 Pro
 [![telegram](https://img.shields.io/badge/chat-telegram-brightgreen.svg?logo=telegram&style=flat-square)](https://t.me/WinOnMIX2S)
