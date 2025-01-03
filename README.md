@@ -1,13 +1,10 @@
 > [!warning]
 > Guide is under development and is missing files. **Do not use.**
 
-<img align="right" src="https://github.com/n00b69/woa-enchilada/blob/main/enchilada.png" width="350" alt="Windows 11 running on enchilada">
+<img align="right" src="" width="350" alt="Windows 11 running on garnet">
 
 # Running Windows on the Redmi Note 13 Pro
 [![telegram](https://img.shields.io/badge/chat-telegram-brightgreen.svg?logo=telegram&style=flat-square)](https://t.me/WinOnMIX2S)
-
-## Choose your language
-**English** | [`Pусский`](/guide/Russian/README-ru.md) | [`Polski`](/guide/Polski/README-pl.md)
 
 ## ⚠️ Warning
 We're not responsible for bricked devices, missing recovery partitions, dead xiaomi factoryline ~~workers~~ cowboys, dead pmics, dead ram, dead sim cards, dead display ics, dead cpus, any xiaomi shenanigans, exploding batteries, dead cats or dogs, nuclear wars or you getting fired because you forgot to boot back in to android for the alarm.
