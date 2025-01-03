@@ -1,150 +1,174 @@
-<img align="right" src="https://github.com/n00b69/woa-enchilada/blob/main/enchilada.png" width="350" alt="Windows 11 running on enchilada">
+# Running Windows on the Xiaomi Redmi Note 13 Pro 5G
 
-# Running Windows on the DEVICENAME
-
-## Partitioning your device
+## Partitioning Your Device
 
 ### Prerequisites
-- A brain (most important of all)
+- A functional brain (most critical tool!)
+- [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)  
+- [Orange Fox Recovery](https://orangefox.download/device/garnet) (preferred)
+- [Parted binary file](https://twrp.me/faq/partitioning.html) (download soon).
 
-- [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
-  
-- [TWRP]() FILE NEEDED
+---
 
-- [Parted]() FILE NEEDED
-
-### Notes
-> [!WARNING]  
+### Important Notes
+> ⚠️ **Warning:**  
 > 
-> DO NOT REBOOT YOUR PHONE! If you think you made a mistake, ask for help in the [Telegram chat](https://t.me/WinOnF1).
-> 
-> Do not run all commands at once, execute them in order!
->
-> YOU CAN BREAK YOUR DEVICE WITH THE COMMANDS BELOW IF YOU DO THEM WRONG!!!
+> - **Do NOT reboot your device** during any of these steps. If an issue arises, seek assistance in the [Telegram chat](https://t.me/WinOnF1).  
+> - Execute commands sequentially; running all at once may damage your device.
+> - Missteps can lead to **permanent damage** to your phone.
 
-### Opening CMD as an admin
-> Download **platform-tools** and extract the folder somewhere, then open CMD as an **administrator**.
->
-> It is recommended to keep this window open and use it throughout the entire guide.
-> 
-> Replace `path\to\platform-tools` with the actual path to the platform-tools folder, for example **C:\platform-tools**.
-```cmd
-cd path\to\platform-tools
-```
+---
 
-#### Flash TWRP recovery
-> Open a CMD window inside the platform-tools folder, then (while your phone is in fastboot mode) run
-```cmd
-fastboot flash recovery path\to\twrp.img reboot recovery
-```
+### Opening CMD as an Administrator
+1. Download **platform-tools** and extract it to a folder.  
+2. Open CMD as an administrator.  
+3. Navigate to the platform-tools folder:  
+   ```cmd
+   cd path\to\platform-tools
 
-#### Backing up important files
-> This will back up **fsc**, **fsg**, **modemst1** and **modemst2** to the current path your CMD is opened in (for example **C:\platform-tools**). Confirm these files are actually there before proceeding.
->
-> If you've got anything else you want to back up, do this now. Your Android data will be erased in the next steps.
-```cmd
+
+---
+
+Flash Orange Fox Recovery (Preferred)
+
+1. Boot the device into fastboot mode.
+
+
+2. Flash recovery with this command:
+
+fastboot flash recovery path\to\orangefox.img
+fastboot reboot recovery
+
+
+
+
+---
+
+Backing Up Important Files
+
+1. Back up fsg, fsc, modemst1, and modemst2:
+
 cmd /c "for %i in (fsg,fsc,modemst1,modemst2) do (adb shell dd if=/dev/block/by-name/%i of=/tmp/%i.bin & adb pull /tmp/%i.bin)"
-```
 
-### Partitioning guide
-> Your DEVICENAME may have different storage sizes. This guide uses the values of the 128GB model as an example. When relevant, the guide will mention if other values can or should be used.
 
-#### Unmount data
-```cmd
+2. Ensure the files are saved in the CMD's current path.
+
+
+
+
+---
+
+Partitioning Guide
+
+This guide is optimized for the Redmi Note 13 Pro 5G, which comes in various storage sizes (128GB, 256GB, and 512GB). Adjust values for your specific device:
+
+Unmount Data Partition
+
 adb shell umount /dev/block/by-name/userdata
-```
 
-#### Preparing for partitioning
-> Download the parted file and move it in the platform-tools folder, then run
-```cmd
+Push and Execute Parted
+
+1. Download the parted binary file and place it in the platform-tools folder.
+
+
+2. Run the following:
+
 adb push parted /cache/ && adb shell "chmod 755 /cache/parted" && adb shell /cache/parted /dev/block/sda
-```
 
-#### Printing the current partition table
-> Parted will print the list of partitions, userdata should be the last partition in the list.
-```cmd
+
+
+Print the Current Partition Table
+
+1. To view all partitions:
+
 print
-```
 
-#### Removing userdata
-> Replace **$** with the number of the **userdata** partition, which should be **21**
-```cmd
+
+
+Remove Userdata Partition
+
+1. Replace $ with the number of the userdata partition (likely 21):
+
 rm $
-```
 
-#### Recreating userdata
-> Replace **1611MB** with the former start value of **userdata** which we just deleted
->
-> Replace **32GB** with the end value you want **userdata** to have
-```cmd
+
+
+Recreate Userdata Partition
+
+1. Replace 1611MB with the starting value and the end value based on your model's storage size:
+
 mkpart userdata ext4 1611MB 32GB
-```
 
-#### Creating ESP partition
-> Replace **32GB** with the end value of **userdata**
->
-> Replace **32.3GB** with the value you used before, adding **0.3GB** to it
-```cmd
+
+
+Create ESP Partition
+
+1. Replace 32GB with the end of the userdata partition and 32.3GB with userdata_end + 0.3GB:
+
 mkpart esp fat32 32GB 32.3GB
-```
 
-#### Creating Windows partition
-> Replace **32.3GB** with the end value of **esp**
->
-> Replace **123GB** with the end value of your disk, use `p free` to find it
-```cmd
+
+
+Create Windows Partition
+
+1. Replace 32.3GB with the ESP end value and adjust the disk end value based on your model:
+
 mkpart win ntfs 32.3GB 123GB
-```
 
-#### Making ESP bootable
-> Use `print` to see all partitions. Replace "$" with your ESP partition number, which should be 23
-```cmd
+
+
+Make ESP Partition Bootable
+
+1. Use print to find the ESP partition number (likely 23):
+
 set $ esp on
-```
 
-#### Exit parted
-```cmd
+
+
+Exit Parted
+
 quit
-```
 
-### Formatting Windows drive
-> [!note]
-> If this command and the next one fails (for example: "Failed to access `/dev/block/by-name/win`: No such file or directory"), reboot your phone, then boot back into the recovery provided in the guide and try again
-```cmd
+
+---
+
+Formatting Drives
+
+Format Windows Partition
+
+1. Label it as WINDEVICE:
+
 adb shell mkfs.ntfs -f /dev/block/by-name/win -L WINDEVICE
-``` 
 
-### Formatting ESP drive
-```cmd
+
+
+Format ESP Partition
+
+1. Label it as ESPDEVICE:
+
 adb shell mkfs.fat -F32 -s1 /dev/block/by-name/esp -n ESPDEVICE
-```
-
-### Formatting data
-- Format all data in TWRP, or Android will not boot.
-- ( Go to Wipe > Format data > type yes )
-
-#### Check if Android still starts
-- Just restart the phone, and see if Android still works
-
-## [Next step: Installing Windows](/guide/2-install.md)
 
 
 
 
+---
+
+Final Steps
+
+Format all data in Orange Fox or TWRP to ensure Android boots:
+
+Go to Wipe > Format Data > Type yes.
+
+
+Restart the phone and confirm Android still works.
 
 
 
+---
 
+Next Step
 
-
-
-
-
-
-
-
-
-
+Proceed to the Installing Windows Guide.
 
 
 
