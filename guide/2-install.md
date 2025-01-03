@@ -62,7 +62,7 @@ Find the ESP partition using:
 list volume
 select volume $
 
-Replace $ with the ESPDEVICE volume number.
+Replace $ with the ESPGARNET volume number.
 
 Assign Letter Y to the ESP Partition
 
