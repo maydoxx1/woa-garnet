@@ -1,11 +1,11 @@
-<img align="right" src="https://github.com/n00b69/woa-enchilada/blob/main/enchilada.png" width="350" alt="Windows 11 running on enchilada">
+<img align="right" src="https://github.com/maydoxx1/woa-garnet/blob/main/garnet.png" width="350" alt="Windows 11 running on enchilada">
 
-# Running Windows on the DEVICENAME
+# Running Windows on the Redmi Note 13 Pro
 
 ## Dualboot guide
 
 ### Prerequisites
-- [UEFI image]() FILE NEEDED
+- [UEFI image]() soon
 
 - [WOA Helper app](https://github.com/Marius586/WoA-Helper-update/blob/main/woahelper.apk)
 
