@@ -1,4 +1,4 @@
-<img align="right" src="https://github.com/maydoxx1/woa-garnet/blob/main/garnet.png" width="350" alt="Windows 11 running on enchilada">
+<img align="right" src="https://github.com/maydoxx1/woa-garnet/blob/main/garnet.png" width="350" alt="Windows 11 running on garnet">
 
 # Running Windows on the Redmi Note 13 Pro
 
