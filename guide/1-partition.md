@@ -144,9 +144,9 @@ adb shell mkfs.ntfs -f /dev/block/by-name/win -L WINDEVICE
 
 Format ESP Partition
 
-1. Label it as ESPDEVICE:
+1. Label it as ESPGARNET:
 
-adb shell mkfs.fat -F32 -s1 /dev/block/by-name/esp -n ESPDEVICE
+adb shell mkfs.fat -F32 -s1 /dev/block/by-name/esp -n ESPGARNET
 
 
 
