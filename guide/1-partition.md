@@ -169,6 +169,6 @@ Restart the phone and confirm Android still works.
 Next Step
 
 Proceed to the Installing Windows Guide.
-
+(https://github.com/maydoxx1/woa-garnet/2-install.md)
 
 
