@@ -6,7 +6,7 @@
 - A functional brain (most critical!)
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)  
 - [Orange Fox Recovery](https://orangefox.download/device/garnet) (preferred)
-- [Parted binary file](https://twrp.me/faq/partitioning.html) (download soon).
+- [Parted binary file]() (download soon).
 
 ---
 
