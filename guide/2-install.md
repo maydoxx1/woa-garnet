@@ -1,126 +1,152 @@
-<img align="right" src="https://github.com/n00b69/woa-enchilada/blob/main/enchilada.png" width="350" alt="Windows 11 running on enchilada">
+# Installing Windows on the Redmi Note 13 Pro
 
-# Running Windows on the DEVICENAME
+## Prerequisites
+1. **Windows on ARM Image (WoA)**  
+   Download the Windows ARM image (ESD or WIM): [Windows ARM Image](https://worproject.com/esd).  
 
-## Installing Windows
+2. **Redmi Note 13 Pro Drivers**  
+   You need device-specific drivers to ensure hardware compatibility. (Provide/download the drivers as an archive.)
 
-### Prerequisites
-- [Windows on ARM image](https://worproject.com/esd)
-  
-- [Drivers]() FILE NEEDED
-  
-- [Msc script](https://github.com/n00b69/woa-perseus/releases/download/Files/msc.sh)
-  
-- [TWRP]() FILE NEEDED (should already be installed)
+3. **MSC Script**  
+   Download the MSC script: [MSC Script on GitHub](https://github.com/n00b69/woa-perseus/releases/download/Files/msc.sh).
 
-#### Boot to TWRP
-> If rebooting on the last page has replaced your recovery back to stock, flash it again in fastboot with:
+4. **TWRP Recovery**  
+   Ensure TWRP is installed. If not, download a compatible version for Redmi Note 13 Pro and flash it using fastboot.  
+
+---
+
+## Booting into TWRP
+If TWRP gets replaced with stock recovery during reboot, reflash it in fastboot:
 ```cmd
-fastboot flash recovery path\to\twrp.img reboot recovery
-```
+fastboot flash recovery path\to\twrp.img
+fastboot reboot recovery
 
-#### Running the msc script
-> Put msc.sh in the platform-tools folder, then run:
-```cmd
-adb push msc.sh / && adb shell sh msc.sh
-```
 
-### Diskpart
-> [!WARNING]
-> DO NOT ERASE, CREATE OR OTHERWISE MODIFY ANY PARTITION WHILE IN DISKPART!!!! THIS CAN ERASE ALL OF YOUR UFS OR PREVENT YOU FROM BOOTING TO FASTBOOT!!!! THIS MEANS THAT YOUR DEVICE WILL BE PERMANENTLY BRICKED WITH NO SOLUTION! (except for taking the device to Xiaomi or flashing it with EDL, both of which will likely cost money)
-```cmd
+---
+
+Running the MSC Script
+
+Place the msc.sh script in your platform-tools folder and execute:
+
+adb push msc.sh /
+adb shell sh msc.sh
+
+
+---
+
+Disk Management (Diskpart)
+
+> WARNING: Do NOT modify partitions in Diskpart!
+Changing partitions can brick your device permanently.
+
+
+
+Select the Windows Partition
+
+Find the Windows partition using:
+
 diskpart
-```
-
-#### Select the Windows volume of the phone
-> Use `list volume` to find it, replace `$` with the actual number of **WINDEVICE**
-```diskpart
+list volume
 select volume $
-``` 
 
-#### Assign the letter X
-```diskpart
+Replace $ with the WINDEVICE volume number.
+
+Assign Letter X to the Windows Partition
+
 assign letter x
-``` 
 
-#### Select the ESP volume of the phone
-> Use `list volume` to find it, replace `$` with the actual number of **ESPDEVICE**
-```diskpart
+Select the ESP Partition
+
+Find the ESP partition using:
+
+list volume
 select volume $
-``` 
 
-#### Assign the letter Y
-```diskpart
+Replace $ with the ESPDEVICE volume number.
+
+Assign Letter Y to the ESP Partition
+
 assign letter y
-```
 
-#### Exit diskpart
-```cmd
+Exit Diskpart
+
 exit
-```
 
-### Installing Windows
-> [!Warning]
-> DO NOT USE 24H2!!!
 
-> Replace `path\to\install.esd` with the actual path of install.esd (it may also be named install.wim)
+---
 
-```cmd
+Installing Windows
+
+> DO NOT USE Windows 11 24H2 Builds!
+
+
+
+Replace path\to\install.esd with the actual path of your Windows ARM image (either .esd or .wim):
+
 dism /apply-image /ImageFile:path\to\install.esd /index:6 /ApplyDir:X:\
-```
 
-> If you get `Error 87`, check the index of your image with `dism /get-imageinfo /ImageFile:path\to\install.esd`, then replace `index:6` with the actual index number of **Windows 11 Pro** in your image
+If you encounter Error 87, check the correct index for Windows 11 Pro:
 
-### Installing Drivers
-> Extract the drivers folder from the archive, then run the following command, replacing `path\to\drivers` with the actual path of the drivers folder
-```cmd
+dism /get-imageinfo /ImageFile:path\to\install.esd
+
+Replace index:6 with the correct index.
+
+
+---
+
+Installing Drivers
+
+Extract the drivers and add them:
+
 dism /image:X:\ /add-driver /driver:path\to\drivers /recurse
-```
-  
-#### Create Windows bootloader files
-```cmd
+
+
+---
+
+Creating the Bootloader
+
+Create bootloader files:
+
 bcdboot X:\Windows /s Y: /f UEFI
-```
 
-#### Enabling test signing
-```cmd
+
+---
+
+Configuring the Bootloader
+
+Enable test signing:
+
 bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" testsigning on
-```
 
-#### Disabling recovery
-```cmd
+Disable recovery:
+
 bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" recoveryenabled no
-```
 
-#### Disabling integrity checks
-```cmd
+Disable integrity checks:
+
 bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" nointegritychecks on
-```
 
-#### Remove the drive letter for ESP
-> If this does not work, ignore it and skip to the next command. This phantom drive will disappear the next time you reboot your PC.
-```cmd
+
+---
+
+Clean Up ESP Drive Letter
+
+If possible, remove the drive letter for the ESP partition:
+
 mountvol y: /d
-```
 
-### Reboot to Android
-> To set up dualboot
-
-## [Last step: Setting up dualboot](/guide/dualboot.md)
+If it doesn’t work, the phantom drive will disappear on the next reboot.
 
 
+---
+
+Reboot to Android
+
+Reboot the device to set up dual boot.
 
 
+---
 
+Final Step: Setting up Dual Boot
 
-
-
-
-
-
-
-
-
-
-
-
+Follow the steps outlined in the dualboot.md guide to finalize the dual boot setup.
