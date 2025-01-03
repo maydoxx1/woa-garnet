@@ -1,6 +1,4 @@
-<img align="right" src="https://github.com/n00b69/woa-enchilada/blob/main/enchilada.png" width="350" alt="Windows 11 running on enchilada">
-
-# Running Windows on the DEVICENAME
+# Running Windows on the Redmi Note 13 Pro
 
 ## Root guide
 
@@ -9,17 +7,17 @@
 
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
 
-- [TWRP]() FILE NEEDED
+- [Orange Fox](https://orangefox.download/device/garnet)
 
-##### Boot TWRP
+##### Boot Orange Fox
 > If your recovery has been replaced back to stock, flash it again in fastboot with:
 ```cmd
-fastboot flash recovery path\to\twrp.img reboot recovery
+fastboot flash recovery path\to\orangefox.img reboot recovery
 ```
 ##### Backing up your boot image
 > Sometimes flashing Magisk can cause a bootloop. To fix this, you'll need to restore a boot.img backup.
 
-Use the TWRP backup feature to make a backup of the boot partition.
+Use the Orange Fox backup feature to make a backup of the boot partition.
 
 ##### Flashing Magisk
 - Flash the magisk.apk (you may have to rename it to magisk.zip) and reboot your phone. 
