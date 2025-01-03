@@ -1,5 +1,3 @@
-<img align="right" src="https://github.com/n00b69/woa-enchilada/blob/main/enchilada.png" width="350" alt="Windows 11 running on enchilada">
-
 # Running Windows on the DEVICENAME
 
 ## Updating drivers
@@ -7,15 +5,15 @@
 ### Prerequisites
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
 
-- [UEFI image]() FILE NEEDED
+- [UEFI image]() Soon!
   
-- [Drivers]() FILE NEEDED
+- [Drivers]() Soon!
   
-- [Msc script]() FILE NEEDED
+- [Msc script]() Soon
   
-- [TWRP]() FILE NEEDED (should already be installed)
+- [Orange Fox](https://orangefox.download/device/garnet) 
 
-#### Boot to TWRP
+#### Boot to Orange Fox
 > If COMPANY has replaced your recovery back to stock, flash it again in fastboot with:
 ```cmd
 fastboot flash recovery path\to\twrp.img reboot recovery
@@ -87,22 +85,3 @@ exit
 
 
 ## Finished!
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
