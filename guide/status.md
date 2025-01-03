@@ -1,4 +1,4 @@
-<img align="right" src="https://github.com/n00b69/woa-enchilada/blob/main/enchilada.png" width="350" alt="Windows 11 running on enchilada">
+<img align="right" src="" width="350" alt="Windows 11 running on garnet">
 
 # Running Windows on the DEVICENAME
 
@@ -8,46 +8,26 @@ The project is in development. Expect some updates in the future.
 
 #### Features
 
-- [X] Audio 
-- [X] Battery status
-- [x] Bluetooth
-- [x] Brightness 
+- [ ] Audio 
+- [ ] Battery status
+- [ ] Bluetooth
+- [ ] Brightness 
 - [ ] Camera
-- [x] Cellular
-- [x] Charging ```VERY slow```
-- [x] Display
-- [x] GPU  ```No x64 acceleration```
-- [x] Touchscreen 
-- [x] UFS
-- [x] USB
-- [x] Wi-Fi
+- [ ] Cellular
+- [ ] Charging
+- [ ] Display
+- [ ] GPU  
+- [ ] Touchscreen 
+- [ ] UFS
+- [ ] USB
+- [ ] Wi-Fi
 
 #### Sensors
 - [ ] Accelerometer
 - [ ] Fingerprint
-- [x] GPS
+- [ ] Face Recognition
+- [ ] GPS
 - [ ] Gyroscope
 - [ ] Light sensor
 - [ ] Magnetometer
 - [ ] Proximity
-
-#### Security
-
-- [ ] Security Processor ```Impossible to get working, Xiaomi broke the firmware```
-- [ ] TPM (Software Backed)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
