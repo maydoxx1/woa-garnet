@@ -1,4 +1,4 @@
-# Running Windows on the DEVICENAME
+# Running Windows on the Redmi Note 13 Pro
 
 ## Updating drivers
 
@@ -14,7 +14,7 @@
 - [Orange Fox](https://orangefox.download/device/garnet) 
 
 #### Boot to Orange Fox
-> If COMPANY has replaced your recovery back to stock, flash it again in fastboot with:
+> If Xiaomi/Redmi has replaced your recovery back to stock, flash it again in fastboot with:
 ```cmd
 fastboot flash recovery path\to\twrp.img reboot recovery
 ```
