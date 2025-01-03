@@ -3,7 +3,7 @@
 ## Partitioning Your Device
 
 ### Prerequisites
-- A functional brain (most critical tool!)
+- A functional brain (most critical!)
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)  
 - [Orange Fox Recovery](https://orangefox.download/device/garnet) (preferred)
 - [Parted binary file](https://twrp.me/faq/partitioning.html) (download soon).
@@ -13,7 +13,7 @@
 ### Important Notes
 > ⚠️ **Warning:**  
 > 
-> - **Do NOT reboot your device** during any of these steps. If an issue arises, seek assistance in the [Telegram chat](https://t.me/WinOnF1).  
+> - **Do NOT reboot your device** during any of these steps. If an issue arises, seek assistance in the [Telegram chat](https://t.me/joinchat/MNjTmBqHIokjweeN0SpoyA).  
 > - Execute commands sequentially; running all at once may damage your device.
 > - Missteps can lead to **permanent damage** to your phone.
 
