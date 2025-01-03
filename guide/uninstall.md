@@ -1,6 +1,4 @@
-<img align="right" src="https://github.com/n00b69/woa-enchilada/blob/main/enchilada.png" width="350" alt="Windows 11 running on enchilada">
-
-# Running Windows on the DEVICENAME
+# Running Windows on the Redmi Note 13 Pro
 
 ## Uninstallation
 
@@ -13,7 +11,7 @@ If you want to relock your bootloader you'll need your partition table to be sto
 
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
   
-- [gpt_both0.bin]() FILE NEEDED
+- [gpt_both0.bin] Soon!
 
 ### Uninstall instructions
 > [!Important]
@@ -40,16 +38,3 @@ fastboot -w
 > If erasing userdata fails, reboot to recovery and wipe all data there instead
 
 ## Finished!
-
-
-
-
-
-
-
-
-
-
-
-
-
