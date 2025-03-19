@@ -3,7 +3,7 @@
 
 <img align="right" src="https://github.com/maydoxx1/woa-garnet/raw/refs/heads/main/garnet.png" width="350" alt="Windows 11 running on garnet">
 
-# Running Windows on the Redmi Note 13 Pro
+# Running Windows on the Redmi Note 13 Pro/Poco X6
 [![telegram](https://img.shields.io/badge/chat-telegram-brightgreen.svg?logo=telegram&style=flat-square)](https://t.me/joinchat/MNjTmBqHIokjweeN0SpoyA)
 
 ## ⚠️ Warning
