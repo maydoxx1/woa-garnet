@@ -35,4 +35,4 @@ This project is in an early stage, all the files here have been contributed by o
 [<img alt="KuatoDev" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/17999613?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/KuatoDev)
 [<img alt="n00b69" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/83274506?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/n00b69)
 [<img alt="maydoxx1" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/109074177?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/maydoxx1)
-[<img alt="maydoxx1" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/66806243?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/vicenteicc2008)
+[<img alt="vicenteicc2008" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/66806243?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/vicenteicc2008)
