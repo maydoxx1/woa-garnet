@@ -1,5 +1,5 @@
 > [!Warning]
-> Guide is under development and is missing files. **Do not use.**
+> Guide is there but it's missing files. **Do not use.**
 
 <img align="right" src="https://github.com/maydoxx1/woa-garnet/raw/refs/heads/main/garnet.png" width="350" alt="Windows 11 running on garnet">
 
@@ -36,3 +36,4 @@ This project is in an early stage, all the files here have been contributed by o
 [<img alt="n00b69" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/83274506?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/n00b69)
 [<img alt="maydoxx1" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/109074177?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/maydoxx1)
 [<img alt="vicenteicc2008" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/66806243?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/vicenteicc2008)
+[<img alt="Mu-Silicium" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/171448307?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/Project-Silicium/Mu-Silicium)
