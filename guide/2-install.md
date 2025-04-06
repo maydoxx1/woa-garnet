@@ -7,31 +7,17 @@
 2. **Redmi Note 13 Pro Drivers**  
    You need device-specific drivers to ensure hardware compatibility. (Provide/download the drivers as an archive.)
 
-3. **MSC Script**  
-   Download the MSC script: [MSC Script on GitHub](https://github.com/n00b69/woa-perseus/releases/download/Files/msc.sh).
-
-4. **TWRP Recovery**  
-   Ensure TWRP is installed. If not, download a compatible version for Redmi Note 13 Pro and flash it using fastboot.  
+3. **Orange Fox Recovery**  
+   Ensure OFOX is installed. If not, download a compatible version for Redmi Note 13 Pro and flash it using fastboot.  
 
 ---
 
-## Booting into TWRP
+## Booting into OFOX
 If TWRP gets replaced with stock recovery during reboot, reflash it in fastboot:
 ```cmd
-fastboot flash recovery path\to\twrp.img
+fastboot flash recovery path\to\ofox.img
 fastboot reboot recovery
-
-
----
-
-Running the MSC Script
-
-Place the msc.sh script in your platform-tools folder and execute:
-
-adb push msc.sh /
-adb shell sh msc.sh
-
-
+```
 ---
 
 Disk Management (Diskpart)
@@ -49,7 +35,7 @@ diskpart
 list volume
 select volume $
 
-Replace $ with the WINDEVICE volume number.
+Replace $ with the WINGARNET volume number.
 
 Assign Letter X to the Windows Partition
 
@@ -77,7 +63,7 @@ exit
 
 Installing Windows
 
-> DO NOT USE Windows 11 24H2 Builds!
+> DO NOT USE Windows 11 24H2 Builds!!!!
 
 
 
