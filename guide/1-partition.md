@@ -136,9 +136,9 @@ Formatting Drives
 
 Format Windows Partition
 
-1. Label it as WINDEVICE:
+1. Label it as WINGARNET:
 
-adb shell mkfs.ntfs -f /dev/block/by-name/win -L WINDEVICE
+adb shell mkfs.ntfs -f /dev/block/by-name/win -L WINGARNET
 
 
 
