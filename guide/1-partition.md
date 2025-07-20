@@ -25,7 +25,8 @@
 3. Navigate to the platform-tools folder:  
    ```cmd
    cd path\to\platform-tools
-   
+   ```
+
 ---
 
 Flash Orange Fox Recovery (Preferred)
@@ -34,26 +35,23 @@ Flash Orange Fox Recovery (Preferred)
 
 
 2. Flash recovery with this command:
+
 ```
 fastboot flash recovery path\to\orangefox.img
 fastboot reboot recovery
 ```
-
-
 
 ---
 
 Backing Up Important Files
 
 1. Back up fsg, fsc, modemst1, and modemst2:
+
 ```
 cmd /c "for %i in (fsg,fsc,modemst1,modemst2) do (adb shell dd if=/dev/block/by-name/%i of=/tmp/%i.bin & adb pull /tmp/%i.bin)"
 ```
 
 2. Ensure the files are saved in the CMD's current path.
-
-
-
 
 ---
 
@@ -69,12 +67,11 @@ Push and Execute Parted
 
 1. Download the parted binary file and place it in the platform-tools folder.
 
-
 2. Run the following:
 ```
 adb push parted /cache/ && adb shell "chmod 755 /cache/parted" && adb shell /cache/parted /dev/block/sda
 ```
-
+---
 
 Print the Current Partition Table
 
@@ -82,7 +79,7 @@ Print the Current Partition Table
 ```
 print
 ```
-
+---
 
 Remove Userdata Partition
 
@@ -90,15 +87,14 @@ Remove Userdata Partition
 ```
 rm $
 ```
-
-
+---
 Recreate Userdata Partition
 
 1. Replace 1611MB with the starting value and the end value based on your model's storage size:
 ```
 mkpart userdata ext4 1611MB 32GB
 ```
-
+---
 
 Create ESP Partition
 
@@ -106,7 +102,7 @@ Create ESP Partition
 ```
 mkpart esp fat32 32GB 32.3GB
 ```
-
+---
 
 Create Windows Partition
 
@@ -114,7 +110,7 @@ Create Windows Partition
 ```
 mkpart win ntfs 32.3GB 123GB
 ```
-
+---
 
 Make ESP Partition Bootable
 
@@ -122,7 +118,7 @@ Make ESP Partition Bootable
 ```
 set $ esp on
 ```
-
+---
 
 Exit Parted
 ```
@@ -139,7 +135,7 @@ Format Windows Partition
 ```
 adb shell mkfs.ntfs -f /dev/block/by-name/win -L WINGARNET
 ```
-
+---
 
 Format ESP Partition
 
@@ -147,7 +143,6 @@ Format ESP Partition
 ```
 adb shell mkfs.fat -F32 -s1 /dev/block/by-name/esp -n ESPGARNET
 ```
-
 
 
 ---
@@ -160,7 +155,6 @@ Go to Wipe > Format Data > Type yes.
 
 
 Restart the phone and confirm Android still works.
-
 
 
 ---
