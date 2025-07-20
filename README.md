@@ -15,10 +15,9 @@ This project is in an early stage, all the files here have been contributed by o
 
 
 ## Get started
-- [Project status](guide/status.md)
+- [Project status](guide/status.md) In development
 
-- [Installation instructions](guide/1-partition.md) In development
-
+- [Installation instructions](guide/1-partition.md)
 - [Troubleshooting](guide/troubleshooting.md)
 
 
